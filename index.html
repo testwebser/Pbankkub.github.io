@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P Bank Music</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="music-player">
+        <div class="sidebar">
+            <div class="logo">
+                <!-- <i class="fab fa-apple"></i> -->
+                <span>Music</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-home"></i> My Fav Song</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="now-playing">
+                <img src="covers/1.jpg" alt="Album Cover" class="album-cover" id="albumCover">
+                <div class="track-info">
+                    <h2 id="masterSongName"></h2>
+                    <p id="Artist"></p>
+                </div>
+                <div class="player-controls">
+                  <button id="shuffle"><i class="fas fa-random"></i></button>
+                  <button id="previous"><i class="fas fa-step-backward"></i></button>
+                  <button id="play-pause"><i class="fas fa-play"></i></button>
+                  <button id="next"><i class="fas fa-step-forward"></i></button>
+                  <button id="repeat"><i class="fas fa-redo-alt"></i></button>
+                </div>
+                <div class="time-display">
+                    <span id="currentTimeDisplay">0:00</span>
+                    <span> / </span>
+                    <span id="durationDisplay">0:00</span>
+                </div>
+                <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+                <div class="volume-control">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" id="volumeControl" min="0" max="100" value="100">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div>
+            <div class="playlist">
+                <h3>Up Next</h3>
+                <div class="songItemContainer">
+                    <!-- Song items will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
