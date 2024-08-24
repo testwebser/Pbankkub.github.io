@@ -6,31 +6,28 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f5f5f7;
-    color: #1d1d1f;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
 }
 
 .music-player {
     display: flex;
     height: 100vh;
+    background-color: #1e1e1e; /* Slightly lighter dark background for the main container */
 }
 
 .sidebar {
     width: 250px;
-    background-color: #f9f9f9;
+    background-color: #2c2c2c; /* Darker sidebar background */
     padding: 20px;
-    border-right: 1px solid #e5e5e5;
+    border-right: 1px solid #333; /* Subtle border */
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: #f5a623; /* Accent color */
     margin-bottom: 30px;
-}
-
-.logo i {
-    color: #fa586a;
-    margin-right: 10px;
 }
 
 nav ul {
@@ -41,10 +38,11 @@ nav ul li {
     margin-bottom: 15px;
     cursor: pointer;
     transition: color 0.3s ease;
+    color: #b3b3b3; /* Light gray for inactive links */
 }
 
 nav ul li:hover {
-    color: #fa586a;
+    color: #f5a623; /* Accent color on hover */
 }
 
 nav ul li i {
@@ -60,13 +58,13 @@ nav ul li i {
 }
 
 .now-playing {
-    background-color: #fff;
+    background-color: #333; /* Dark background for the now playing section */
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slightly more pronounced shadow */
 }
 
 .album-cover {
@@ -85,10 +83,11 @@ nav ul li i {
 .track-info h2 {
     font-size: 24px;
     margin-bottom: 5px;
+    color: #e0e0e0; /* Light text color */
 }
 
 .track-info p {
-    color: #86868b;
+    color: #b3b3b3; /* Light gray for artist name */
 }
 
 .player-controls {
@@ -103,21 +102,26 @@ nav ul li i {
     margin: 0 15px;
     cursor: pointer;
     transition: color 0.3s ease;
+    color: #b3b3b3; /* Light gray for icons */
 }
 
 .player-controls i:hover {
-    color: #fa586a;
+    color: #f5a623; /* Accent color on hover */
 }
+
 .player-controls button {
-    margin: 0 5px; /* Adjust the horizontal spacing between buttons */
-    padding: 10px; /* Adjust the padding inside the buttons */
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px;
 }
 
 #myProgressBar, #volumeControl {
     width: 100%;
     height: 5px;
     -webkit-appearance: none;
-    background: #e5e5e5;
+    background: #444; /* Dark track background */
     outline: none;
     border-radius: 5px;
     opacity: 0.7;
@@ -133,7 +137,7 @@ nav ul li i {
     appearance: none;
     width: 15px;
     height: 15px;
-    background: #fa586a;
+    background: #f5a623; /* Accent color for the thumb */
     cursor: pointer;
     border-radius: 50%;
 }
@@ -141,7 +145,7 @@ nav ul li i {
 #myProgressBar::-moz-range-thumb, #volumeControl::-moz-range-thumb {
     width: 15px;
     height: 15px;
-    background: #fa586a;
+    background: #f5a623; /* Accent color for the thumb */
     cursor: pointer;
     border-radius: 50%;
 }
@@ -154,6 +158,7 @@ nav ul li i {
 
 .playlist h3 {
     margin-bottom: 15px;
+    color: #e0e0e0; /* Light text color */
 }
 
 .songItemContainer {
@@ -164,15 +169,15 @@ nav ul li i {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #fff;
+    background-color: #2c2c2c; /* Dark background for song items */
     border-radius: 5px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for song items */
     transition: background-color 0.3s ease;
 }
 
 .songItem:hover {
-    background-color: #f0f0f0;
+    background-color: #444; /* Slightly lighter background on hover */
 }
 
 .songItem img {
@@ -186,6 +191,7 @@ nav ul li i {
 .songItem .songName {
     flex-grow: 1;
     font-size: 16px;
+    color: #e0e0e0; /* Light text color */
 }
 
 .songItem .songlistplay {
@@ -195,19 +201,19 @@ nav ul li i {
 
 .songItem .timestamp {
     font-size: 14px;
-    color: #86868b;
+    color: #b3b3b3; /* Light gray for timestamp */
     margin-right: 10px;
 }
 
 .songItemPlay {
     font-size: 18px;
     cursor: pointer;
-    color: #fa586a;
+    color: #f5a623; /* Accent color for play icon */
     transition: color 0.3s ease;
 }
 
 .songItemPlay:hover {
-    color: #ff6b81;
+    color: #f5a623; /* Slightly different accent color on hover */
 }
 
 .volume-control {
@@ -219,7 +225,7 @@ nav ul li i {
 .volume-control i {
     font-size: 18px;
     margin: 0 10px;
-    color: #86868b;
+    color: #b3b3b3; /* Light gray for volume icons */
 }
 
 @media (max-width: 768px) {
@@ -230,7 +236,7 @@ nav ul li i {
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid #333; /* Subtle border */
     }
 
     .main-content {
@@ -247,4 +253,3 @@ nav ul li i {
         margin: 0 10px;
     }
 }
-
